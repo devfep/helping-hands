@@ -1,0 +1,27 @@
+img {
+   display: block;
+   margin: 10px auto;
+   height: 200px;
+}
+
+#nav {
+    display: inline-block;
+    padding: 30px;
+    margin-left: 0 auto;
+    justify-content: space-between;
+    color: white;
+    font-size: large;
+}
+
+#nav:hover {
+    color: blue;
+    cursor: pointer;
+    box-shadow: 0 0 10px white;
+    transform: scale(1.1);
+    
+}
+
+.navbar {
+    height: 150px
+}
+

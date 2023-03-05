@@ -1,0 +1,7 @@
+.help-card {
+  display: grid;
+  /* grid-template-columns: 25px, 25px, 25px, 25px; */
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
