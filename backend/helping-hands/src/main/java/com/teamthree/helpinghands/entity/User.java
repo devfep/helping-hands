@@ -19,7 +19,8 @@ public class User extends BaseEntity{
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    private Long userId;
+    @Column(name = "user_id")
+    private long userId;
 
     @Size(min=4, message = "Name must be at least 4 characters long")
     @NotBlank(message = "Name cannot be blank")
@@ -44,13 +45,15 @@ public class User extends BaseEntity{
     private String zipCode;
 
     @Pattern(regexp="(^$|[0-9]{10})",message = "Mobile number must be 10 digits")
- //   @NotBlank(message="Phone number cannot be blank")
+//    @NotBlank(message="Phone number cannot be blank")
     private String phoneNumber;
 
     @Column(columnDefinition = "boolean default true")
     private boolean hasFood;
 
-//Community One-to-many
+    @ManyToOne
+    @JoinColumn(name = "community_id")
+    private Community community;
 
 
 
